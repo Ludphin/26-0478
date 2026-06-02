@@ -1,16 +1,15 @@
-Replace your index.html code with this one:
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Horizon Tours</title>
+    <title>Apex Precision Auto Care</title>
     <style>
         :root {
-            --primary: #16a085;
-            --primary-hover: #117a65;
-            --dark: #2c3e50;
-            --light: #f4f7f6;
+            --primary: #e74c3c; /* Racing Red Accent */
+            --primary-hover: #c0392b;
+            --dark: #2c3e50; /* Deep Charcoal */
+            --light: #f4f6f7;
             --card-bg: #ffffff;
         }
 
@@ -25,7 +24,7 @@ Replace your index.html code with this one:
 
         /* 1. Navigation Hyperlinks Bar */
         nav {
-            background-color: var(--dark);
+            background-color: #1a252f;
             padding: 15px 20px;
             position: sticky;
             top: 0;
@@ -61,31 +60,33 @@ Replace your index.html code with this one:
         }
 
         .nav-links a:hover {
-            color: white;
+            color: var(--primary);
         }
 
         /* Hero / Header Section */
         header {
-            background: linear-gradient(135deg, var(--dark), #34495e);
+            background: linear-gradient(135deg, #1a252f, var(--dark));
             color: white;
             text-align: center;
-            padding: 60px 20px;
+            padding: 70px 20px;
             margin-bottom: 40px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--primary);
         }
 
-        /* Heading with tour website name */
+        /* Heading with auto mechanic website name */
         header h1 {
             margin: 0;
             font-size: 2.8rem;
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         /* Subheading describing what the website does */
         header p {
             margin: 15px 0 0 0;
             font-size: 1.2rem;
-            color: #a3e4d7;
+            color: #bdc3c7;
             font-weight: 300;
         }
 
@@ -101,9 +102,11 @@ Replace your index.html code with this one:
             margin-top: 40px;
             margin-bottom: 25px;
             font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* Three Key Features Layout */
+        /* Three Key Service Features Layout */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -114,9 +117,9 @@ Replace your index.html code with this one:
         .feature-card {
             background: var(--card-bg);
             padding: 25px;
-            border-radius: 8px;
+            border-radius: 6px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary);
+            border-left: 4px solid var(--primary);
         }
 
         .feature-card h3 {
@@ -124,11 +127,11 @@ Replace your index.html code with this one:
             color: var(--dark);
         }
 
-        /* 2. Packages Table Styling */
+        /* 2. Mechanics & Maintenance Services Table Styling */
         .table-container {
             background: var(--card-bg);
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 6px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             overflow-x: auto;
             margin-bottom: 50px;
@@ -141,45 +144,57 @@ Replace your index.html code with this one:
         }
 
         th, td {
-            padding: 12px 15px;
+            padding: 14px 15px;
             border-bottom: 1px solid #ddd;
         }
 
         th {
             background-color: var(--dark);
             color: white;
+            text-transform: uppercase;
+            font-size: 0.9rem;
         }
 
         tr:hover {
             background-color: #f9f9f9;
         }
 
-        /* 3. YouTube Video Responsive Container */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            background: #000;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        /* 3. Image Grid Showcase Layout (Replaces YouTube Video) */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
             margin-bottom: 50px;
         }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .gallery-item {
+            background: var(--card-bg);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .gallery-item img {
             width: 100%;
-            height: 100%;
-            border: 0;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-caption {
+            padding: 15px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--dark);
+            background: #fff;
+            border-top: 1px solid #eee;
         }
 
         /* Four paragraphs container */
         .about-section {
             background: var(--card-bg);
             padding: 40px;
-            border-radius: 8px;
+            border-radius: 6px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
@@ -195,103 +210,112 @@ Replace your index.html code with this one:
 
         /* Responsive adjustments */
         @media (max-width: 600px) {
-            header h1 { font-size: 2rem; }
+            header h1 { font-size: 1.8rem; }
             header p { font-size: 1rem; }
             .about-section { padding: 20px; }
             .nav-container { flex-direction: column; gap: 10px; }
+            .image-gallery { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
+    <!-- 1. Navigation Links -->
     <nav>
         <div class="nav-container">
-            <a href="#" class="nav-logo">🌍 Apex Horizon</a>
+            <a href="#" class="nav-logo">🔧 Apex Auto Care</a>
             <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#packages">Packages</a>
-                <a href="#preview">Preview</a>
-                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#facility">Our Facility</a>
+                <a href="#about">About Us</a>
             </div>
         </div>
     </nav>
 
+    <!-- Header containing Title and Subtitle -->
     <header>
-        <h1>Apex Horizon Tours</h1>
-        <p>Crafting bespoke, unforgettable travel experiences for the modern adventurer.</p>
+        <h1>Apex Precision Auto Care</h1>
+        <p>Professional diagnostics, transparent pricing, and precision mechanical repair services.</p>
     </header>
 
     <div class="container">
         
-        <h2 class="section-title" id="features">Why Choose Our Tours?</h2>
+        <!-- Three Key Features Section -->
+        <h2 class="section-title" id="services">Why Drivers Trust Us</h2>
         <div class="features-grid">
             <div class="feature-card">
-                <h3>1. Curated Itineraries</h3>
-                <p>Handcrafted journeys designed by local experts who know the true hidden gems of every region.</p>
+                <h3>1. Certified Technicians</h3>
+                <p>All structural repairs and digital engine tune-ups are executed by ASE-certified mechanics.</p>
             </div>
             <div class="feature-card">
-                <h3>2. Sustainable Travel</h3>
-                <p>We partner exclusively with eco-friendly accommodations and carbon-neutral local transit.</p>
+                <h3>2. Advanced Diagnostics</h3>
+                <p>We leverage modern computer interfaces to pinpoint errors quickly and eliminate guesswork.</p>
             </div>
             <div class="feature-card">
-                <h3>3. 24/7 Concierge</h3>
-                <p>Enjoy seamless, live support from the exact moment you book until your safe return back home.</p>
+                <h3>3. Nationwide Warranty</h3>
+                <p>Drive away securely knowing that our qualifying parts and services carry a robust 24-month protection plan.</p>
             </div>
         </div>
 
-        <h2 class="section-title" id="packages">Our Featured Packages</h2>
+        <!-- 2. Standard Maintenance Table -->
+        <h2 class="section-title" id="pricing">Common Maintenance & Pricing</h2>
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Destination</th>
-                        <th>Duration</th>
+                        <th>Service Type</th>
+                        <th>Estimated Time</th>
                         <th>Includes</th>
-                        <th>Price (USD)</th>
+                        <th>Price Range</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Kyoto Tradition</strong></td>
-                        <td>7 Days</td>
-                        <td>Temples, Tea Ceremonies, 5★ Ryokan</td>
-                        <td>$2,450</td>
+                        <td><strong>Synthetic Oil Change</strong></td>
+                        <td>45 Mins</td>
+                        <td>5 Quarts Oil, Premium Filter, Fluid Top-Off</td>
+                        <td>$75 - $95</td>
                     </tr>
                     <tr>
-                        <td><strong>Mediterranean Coast</strong></td>
-                        <td>10 Days</td>
-                        <td>Yacht Cruise, Wine Tastings, Villa Stay</td>
-                        <td>$3,890</td>
+                        <td><strong>Brake Pad Replacement</strong></td>
+                        <td>1.5 Hours</td>
+                        <td>Ceramic Pads, Hardware Kit, Component Lubrication</td>
+                        <td>$180 - $240</td>
                     </tr>
                     <tr>
-                        <td><strong>Patagonia Expedition</strong></td>
-                        <td>8 Days</td>
-                        <td>Glacier Trekking, Guided Hiking, Eco-Lodge</td>
-                        <td>$2,100</td>
+                        <td><strong>Engine Diagnostics</strong></td>
+                        <td>1 Hour</td>
+                        <td>Full Computerized Code Scan, Multi-Point Inspection</td>
+                        <td>$90 - $110</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="section-title" id="preview">Experience The Adventure</h2>
-        <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/tPeXGZ8VfXw" 
-                title="Travel Teaser Preview" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+        <!-- 3. Image Layout Showcase (Replacing YouTube Frame) -->
+        <h2 class="section-title" id="facility">Inside Our Workshop</h2>
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://images.squarespace-cdn.com/content/v1/63d92a1ea2956a465c1ee468/b156671d-1771-48de-8c36-7d5ca98c3254/20230508_075704.jpg" alt="Clean modern auto shop hydraulic lifts">
+                <div class="gallery-caption">Our Service Bays — Clean, organized facilities equipped with precision hydraulic lifts.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://www.ettransport.ca/wp-content/uploads/2022/05/Engine-Repair.jpg" alt="Mechanic working on car engine block component">
+                <div class="gallery-caption">Precision Engineering — Detailed diagnostics and meticulous repairs under the hood.</div>
+            </div>
         </div>
 
-        <h2 class="section-title" id="about">About Our Platform</h2>
+        <!-- Four Paragraphs Section -->
+        <h2 class="section-title" id="about">Our Story & Operations</h2>
         <div class="about-section">
-            <p><strong>Paragraph 1:</strong> Welcome to Apex Horizon Tours, your digital gateway to exploring the world like never before. This website was built to bridge the gap between ordinary tourism and deep cultural immersion. We believe that traveling should be seamless, inspiring, and deeply personal, which is why our digital platform is designed to put total control of your next adventure right at your fingertips.</p>
+            <p><strong>Paragraph 1:</strong> Founded with a commitment to restoring integrity to the auto repair process, Apex Precision Auto Care has grown from a humble two-bay garage into a cutting-edge regional repair center. We understand that your vehicle is a vital extension of your daily life, keeping you safe and connected. That is why our core philosophy centers on transparency, absolute mechanical accuracy, and an unwavering commitment to quality components.</p>
 
-            <p><strong>Paragraph 2:</strong> Through our interactive interface, you can explore hundreds of destinations, ranging from the sun-drenched coasts of the Mediterranean to the serene, misty peaks of Kyoto. Each destination page is packed with rich media, historical context, and practical travel tips. We don't just show you where to go; we provide the narrative and flavor of the region before you even pack your bags.</p>
+            <p><strong>Paragraph 2:</strong> Our physical workshop features top-tier modern machinery engineered to service domestic, import, and fleet vehicles alike. From automated alignment racks to advanced OBD-II electrical scan systems, we match factory dealership capabilities while offering the personalized care of an independent shop. We take pride in educating our clients about their vehicle health, ensuring no work begins without explicit prior approval.</p>
 
-            <p><strong>Paragraph 3:</strong> Behind this website is a dedicated team of travel enthusiasts, developers, and global guides working in tandem. We continuously update our platform with real-time travel advisories, seasonal recommendations, and exclusive local partnerships. Our goal is to eliminate the stress of planning by providing transparent pricing, verified reviews, and a secure booking system you can trust.</p>
+            <p><strong>Paragraph 3:</strong> Beyond standard engine overhauls and complex brake calibrations, we place heavy emphasis on preventative maintenance. Our historical tracking database monitors your vehicle's specific mileage milestones, ensuring we capture and resolve minor component stress before it morphs into expensive, unexpected roadside failures. We keep full logs of fluid states, belt wear, and tire integrity so you can plan out repairs predictably.</p>
 
-            <p><strong>Paragraph 4:</strong> Ultimately, Apex Horizon Tours is more than just a booking engine—it is a community of passionate globetrotters. As you navigate our site, you will find forums to connect with fellow travelers, blogs detailing off-the-beaten-path expeditions, and tools to customize your itinerary to the smallest detail. Thank you for choosing us to be a part of your journey; the horizon is waiting.</p>
+            <p><strong>Paragraph 4:</strong> Ultimately, a mechanics shop is only as durable as the trust it establishes within the local community. We hold ourselves to a strict ethical standard, consistently recycling used fluids responsibly and procuring components from premier, verified parts manufacturers. Thank you for entrusting your vehicle to Apex Precision Auto Care—where we handle your engine as if it were our own.</p>
         </div>
 
     </div>
