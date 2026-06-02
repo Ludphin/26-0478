@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Precision Auto Care</title>
+    <style>
+        :root {
+            --primary: #e74c3c; /* Racing Red Accent */
+            --primary-hover: #c0392b;
+            --dark: #2c3e50; /* Deep Charcoal */
+            --light: #eef2f3; /* Darker background tint to make cards pop */
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: #333;
+        }
+
+        /* 1. Navigation Hyperlinks Bar */
+        nav {
+            background-color: #1a252f;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero / Header Section */
+        header {
+            background: linear-gradient(135deg, #1a252f, var(--dark));
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        /* Heading with auto mechanic website name */
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Subheading describing what the website does */
+        header p {
+            margin: 15px 0 0 0;
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px 60px 20px;
+        }
+
+        h2.section-title {
+            text-align: center;
+            color: var(--dark);
+            margin-top: 40px;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Three Key Service Features Layout */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--primary);
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: var(--dark);
+        }
+
+        /* 2. Mechanics & Maintenance Services Table Styling */
+        .table-container {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            overflow-x: auto;
+            margin-bottom: 50px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 14px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--dark);
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* 3. Image Grid Showcase Layout */
+        .image-gallery {
+            display:
