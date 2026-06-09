@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshBulk Wholesale Foods</title>
+</head>
+<body>
+
+  <h1>FreshBulk Wholesale Foods</h1>
+
+  <a href="#home">Home</a> |
+  <a href="#about">About</a> |
+  <a href="#products">Products</a> |
+  <a href="#gallery">Gallery</a> |
+  <a href="#contact">Contact</a>
+
+  <hr />
+
+  <!-- HOME SECTION -->
+  <h2 id="home">Welcome to FreshBulk Wholesale Foods</h2>
+  <p>
+    FreshBulk Wholesale Foods is your trusted supplier for bulk food products.
+    We provide fresh, high-quality food items at affordable wholesale prices.
+    Whether you are a restaurant owner, a small business, or a family buying in bulk,
+    we have something for you. We believe that good food should be accessible to everyone.
+  </p>
+  <p>
+    Our warehouse is stocked with a wide variety of products including grains, vegetables,
+    dairy, meat, and packaged goods. We work directly with farmers and manufacturers to
+    make sure you get the best prices without compromising on quality.
+  </p>
+
+  <hr />
+
+  <!-- ABOUT SECTION -->
+  <h2 id="about">About Us</h2>
+  <p>
+    FreshBulk was started in 2010 with the goal of making wholesale food purchasing simple
+    and reliable. Over the years we have grown to serve hundreds of clients across the country.
+    Our team is passionate about food and committed to great customer service.
+    We are proud to offer next-day delivery to most locations.
+  </p>
+
+  <hr />
+
+  <!-- PRODUCTS SECTION -->
+  <h2 id="products">Our Product Categories</h2>
+
+  <p>We stock a wide range of food products. Here are our main categories:</p>
+
+  <ul>
+    <li>Grains and Cereals</li>
+    <li>Fresh Vegetables and Fruits</li>
+    <li>Meat and Poultry</li>
+    <li>Dairy Products</li>
+    <li>Canned and Packaged Goods</li>
+    <li>Cooking Oils and Spices</li>
+  </ul>
+
+  <h3>How to Order from Us</h3>
+  <ol>
+    <li>Create a free account on our website</li>
+    <li>Browse our product catalogue</li>
+    <li>Add items to your cart</li>
+    <li>Choose your delivery date</li>
+    <li>Complete payment and receive your confirmation</li>
+  </ol>
+
+  <h3>Featured Products</h3>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <tr>
+      <th>Product</th>
+      <th>Category</th>
+      <th>Price (per unit)</th>
+    </tr>
+    <tr>
+      <td>White Rice (25kg bag)</td>
+      <td>Grains</td>
+      <td>$18.99</td>
+    </tr>
+    <tr>
+      <td>Fresh Tomatoes (crate)</td>
+      <td>Vegetables</td>
+      <td>$12.50</td>
+    </tr>
+    <tr>
+      <td>Chicken Breast (10kg)</td>
+      <td>Meat and Poultry</td>
+      <td>$34.00</td>
+    </tr>
+    <tr>
+      <td>Sunflower Oil (5L)</td>
+      <td>Cooking Oils</td>
+      <td>$9.75</td>
+    </tr>
+    <tr>
+      <td>Canned Beans (pack of 24)</td>
+      <td>Packaged Goods</td>
+      <td>$22.00</td>
+    </tr>
+  </table>
+
+  <hr />
+
+  <!-- GALLERY SECTION -->
+  <h2 id="gallery">Food Gallery</h2>
+
+  <p>Here is a look at some of the products we carry:</p>
+
+  <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=300&h=200&fit=crop" alt="Fresh vegetables at a market" width="300" height="200" />
+  <img src="https://images.unsplash.com/photo-1506484381205-f7945653044d?w=300&h=200&fit=crop" alt="Grains and cereals in bulk" width="300" height="200" />
+  <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=300&h=200&fit=crop" alt="Fresh fruits display" width="300" height="200" />
+
+  <br /><br />
+
+  <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=300&h=200&fit=crop" alt="Cooking oils and spices" width="300" height="200" />
+  <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?w=300&h=200&fit=crop" alt="Dairy products" width="300" height="200" />
+  <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=300&h=200&fit=crop" alt="Meat and poultry" width="300" height="200" />
+
+  <hr />
+
+  <!-- VIDEO SECTION -->
+  <h2>Video: How Wholesale Food Delivery Works</h2>
+  <p>Watch this short video to understand how bulk food supply chains work:</p>
+
+  <iframe
+    width="400"
+    height="250"
+    src="https://www.youtube.com/embed/CxvJ4xULGOk"
+    title="How Wholesale Food Delivery Works"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+
+  <h2>Video: Tips for Buying Food in Bulk</h2>
+  <p>Here are some helpful tips if you are new to buying wholesale:</p>
+
+  <iframe
+    width="400"
+    height="250"
+    src="https://www.youtube.com/embed/1NxRoPMwdX0"
+    title="Tips for Buying Food in Bulk"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+
+  <hr />
+
+  <!-- CONTACT SECTION -->
+  <h2 id="contact">Contact Us</h2>
+  <p>
+    We would love to hear from you. Reach out to us using the details below:
+  </p>
+  <p>Email: info@freshbulkfoods.com</p>
+  <p>Phone: +1 (800) 555-0192</p>
+  <p>Address: 45 Warehouse District, Chicago, IL 60601</p>
+  <p>Business Hours: Monday to Friday, 8:00 AM – 5:00 PM</p>
+
+  <hr />
+  <p>Copyright 2025 FreshBulk Wholesale Foods. All rights reserved.</p>
+
+</body>
+</html>
