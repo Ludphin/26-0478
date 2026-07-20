@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <!-- CLEAN NAVIGATION BAR (NO LONGER BLOCKED) -->
+    <!-- NAVIGATION BAR -->
     <header>
         <div class="logo-area">
             <h1>🚗 Turbo Company</h1>
@@ -25,17 +25,160 @@
         </nav>
     </header>
 
-    <!-- THE POP-UP INSTEAD OF A BLOCKED OVERLAY -->
+    <!-- MAIN CONTENT SECTIONS -->
+    <main>
+        
+        <!-- ABOUT SECTION -->
+        <section id="about" class="feature-card" style="max-width: 900px; margin: 40px auto; text-align: center;">
+            <h2>About Turbo Company</h2>
+            <p>Any imports genuine Japanese spare parts for all major vehicle brands. We provide affordable prices, quality products, and excellent customer service.</p>
+        </section>
+
+        <!-- WHY CHOOSE US / PRODUCTS SECTION -->
+        <section id="products">
+            <h2>Why Choose Us?</h2>
+            <div class="features-container">
+                <div class="feature-card">
+                    <h3>✅ Genuine Parts</h3>
+                    <p>Original Japanese spare parts.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🚚 Fast Delivery</h3>
+                    <p>Delivery across Kenya.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💰 Affordable Prices</h3>
+                    <p>Competitive prices for every customer.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION (Fixed Tall Rounded Style) -->
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="images/image1.jpg" alt="Spare Part 1">
+                    <p>Engine Components</p>
+                </div>
+                <div class="image-card">
+                    <img src="images/image2.jpg" alt="Spare Part 2">
+                    <p>Brake Systems</p>
+                </div>
+                <div class="image-card">
+                    <img src="images/image3.jpg" alt="Spare Part 3">
+                    <p>Suspension Parts</p>
+                </div>
+                <div class="image-card">
+                    <img src="images/image4.jpg" alt="Spare Part 4">
+                    <p>Electrical Spares</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIDEO SECTION -->
+        <section id="video" style="text-align: center; margin: 40px 0;">
+            <h2>Behind the Craft & Collection Reels</h2>
+            <div class="features-container">
+                <!-- Replace placeholders with your actual video tags or YouTube links if you have them -->
+                <div class="feature-card" style="min-width: 300px;">
+                    <h3>Behind the Craft</h3>
+                    <div style="background: #2D2D2D; width: 100%; height: 200px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white;">▶ Video Player</div>
+                </div>
+                <div class="feature-card" style="min-width: 300px;">
+                    <h3>New Collection Reel</h3>
+                    <div style="background: #2D2D2D; width: 100%; height: 200px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white;">▶ Video Player</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICES SECTION -->
+        <section id="prices" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+            <h2>Price List</h2>
+            <div class="feature-card" style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--text-plum); color: var(--text-plum); font-weight: bold;">
+                            <th style="padding: 10px;">Item</th>
+                            <th style="padding: 10px;">Material</th>
+                            <th style="padding: 10px;">Price (KSh)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                            <td style="padding: 10px;">Brake Pads</td>
+                            <td style="padding: 10px;">Ceramic</td>
+                            <td style="padding: 10px;">3,500</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                            <td style="padding: 10px;">Spark Plugs</td>
+                            <td style="padding: 10px;">Iridium</td>
+                            <td style="padding: 10px;">1,800</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                            <td style="padding: 10px;">Oil Filter</td>
+                            <td style="padding: 10px;">Standard</td>
+                            <td style="padding: 10px;">2,400</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- REGISTER FORM SECTION -->
+        <section id="register" style="max-width: 500px; margin: 40px auto; padding: 20px;">
+            <form action="#" onsubmit="event.preventDefault(); alert('Registration submitted!');">
+                <h2>Join the family and unlock exclusive deals! ✨</h2>
+                
+                <label style="display: block; margin-top: 10px; font-weight: 600;">Full Name *</label>
+                <input type="text" placeholder="e.g. Valerie Wanjiru" required style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;">
+
+                <label style="display: block; margin-top: 15px; font-weight: 600;">Email Address *</label>
+                <input type="email" placeholder="e.g. val@gmail.com" required style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;">
+
+                <label style="display: block; margin-top: 15px; font-weight: 600;">Phone Number *</label>
+                <input type="tel" placeholder="e.g. 0788 945 632" required style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;">
+
+                <label style="display: block; margin-top: 15px; font-weight: 600;">Gender *</label>
+                <select style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;">
+                    <option>Select...</option>
+                    <option>Female</option>
+                    <option>Male</option>
+                    <option>Prefer not to say</option>
+                </select>
+
+                <button type="submit" style="width: 100%; background: var(--plum-header); color: white; border: none; padding: 12px; margin-top: 20px; border-radius: 25px; font-weight: bold; cursor: pointer;">Register</button>
+            </form>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" style="max-width: 600px; margin: 40px auto; text-align: center;">
+            <h2>Contact Us</h2>
+            <div class="feature-card" style="margin-bottom: 15px;">
+                <p>📞 <strong>Call / WhatsApp:</strong></p>
+                <p><a href="tel:+254788945632" style="color: var(--text-plum); font-weight: bold;">+254 788 945 632</a></p>
+            </div>
+            <div class="feature-card" style="margin-bottom: 15px;">
+                <p>✉️ <strong>Email:</strong></p>
+                <p>val@gmail.com</p>
+            </div>
+            <div class="feature-card">
+                <p>📍 <strong>Location:</strong></p>
+                <p>Nairobi, Kenya</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- AUTOMATIC PREMIUM POP-UP MODAL (Completely out of the way of the content) -->
     <div class="popup-overlay" id="premiumPopup">
         <div class="popup-box">
             <h2>Premium Japanese Spare Parts</h2>
             <p>We supply quality spare parts for Toyota, Nissan, Subaru, Mazda, Honda and Mitsubishi.</p>
-            <a href="#register" class="popup-btn" onclick="closePopup()">Register Today</a>
+            <button class="popup-btn" onclick="closePopup()">Register Today</button>
             <button class="close-x" onclick="closePopup()">✕</button>
         </div>
     </div>
-
-    <!-- Rest of your page content goes here (About, Why Choose Us, Gallery, etc.) -->
 
     <script src="script.js"></script>
 </body>

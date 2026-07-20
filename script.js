@@ -1,4 +1,4 @@
-// Automatically trigger the premium alert modal window on page load
+// Automatically show the premium pop-up when the website finishes loading
 window.addEventListener('DOMContentLoaded', () => {
     const popup = document.getElementById('premiumPopup');
     if (popup) {
@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Remove the pop-up display clear out of the way
+// Completely hide and remove the pop-up overlay out of the way
 function closePopup() {
     const popup = document.getElementById('premiumPopup');
     if (popup) {
