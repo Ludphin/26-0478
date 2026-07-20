@@ -1,292 +1,192 @@
-/* ===========================================
-   TURBO COMPANY - STYLE.CSS
-   Student HTML5 Assignment
-=========================================== */
+/* ==========================================
+   TURBO COMPANY - PLUM & CREAM BLENDED STYLE
+   ========================================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+:root {
+    --plum-dark: #4A1E35;       /* Deep Plum/Burgundy from your reference image */
+    --cream-bg: #FFFDF9;        /* Warm cream background that blends softly */
+    --blush-tint: #FFF2F5;      /* Ultra-soft pink tint for sections */
+    --card-white: #FFFFFF;      /* Clean white for content cards */
+    --text-plum: #6B1D43;       /* Contrast plum color for text headings */
+    --text-dark: #2D2D2D;       /* Soft dark charcoal for body text */
+    --accent-gold: #D4A373;     /* Elegant warm blend accent */
 }
 
-body{
-    background:#eef4ff;
-    color:#333;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* HEADER */
-
-header{
-    background:linear-gradient(90deg,#1565C0,#42A5F5);
-    color:white;
-    text-align:center;
-    padding:30px;
+body {
+    background-color: var(--cream-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
-header h1{
-    font-size:42px;
+/* Header & Nav Styling (Clear, Unblocked, and Cohesive) */
+header {
+    background-color: var(--plum-dark);
+    padding: 25px 15px;
+    text-align: center;
+    position: relative;
+    z-index: 10; /* Keeps nav on top, but accessible */
 }
 
-header p{
-    margin-top:10px;
-    font-size:18px;
+.logo-area h1 {
+    color: #FFFFFF;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
 }
 
-/* NAVIGATION */
-
-nav{
-    background:#ff5722;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-    padding:15px;
+.logo-area p {
+    color: #E2C2D4;
+    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
+nav {
+    margin-top: 10px;
 }
 
-nav a:hover{
-    color:yellow;
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 5px 12px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: color 0.2s ease;
 }
 
-/* HERO */
-
-.hero{
-    position:relative;
-    text-align:center;
+nav a:hover {
+    color: var(--accent-gold);
 }
 
-.hero-image{
-    width:100%;
-    height:520px;
-    object-fit:cover;
+/* Content Sections */
+h2, h3 {
+    color: var(--text-plum);
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-.hero-text{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    background:rgba(0,0,0,.45);
-    color:white;
-    padding:30px;
-    border-radius:12px;
+/* Flex / Grid layouts for "Why Choose Us" cards */
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.hero h2{
-    font-size:40px;
+.feature-card {
+    background: var(--card-white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(74, 30, 53, 0.05);
+    border: 1px solid #F0E4EC;
+    text-align: center;
+    min-width: 250px;
 }
 
-.hero p{
-    margin:20px 0;
-    font-size:18px;
+/* Image Gallery Configuration (Matches the tall rounded cards) */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-button{
-    background:#ff9800;
-    color:white;
-    border:none;
-    padding:15px 35px;
-    font-size:18px;
-    border-radius:8px;
-    cursor:pointer;
+.image-card {
+    background: var(--card-white);
+    border-radius: 16px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    border: 1px solid #F0E4EC;
 }
 
-button:hover{
-    background:#1565C0;
+.image-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Prevents squishing/distortion */
+    border-radius: 12px;
 }
 
-/* SECTIONS */
-
-section{
-    padding:50px;
+.image-card p {
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--text-plum);
 }
 
-section h2{
-    text-align:center;
-    color:#1565C0;
-    margin-bottom:25px;
+/* PROPER POP-UP SYSTEM STYLING */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Higher than everything else */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
-/* CARDS */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+.popup-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
-.cards article{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    text-align:center;
-    box-shadow:0 5px 12px rgba(0,0,0,.15);
+.popup-box {
+    background: var(--card-white);
+    padding: 40px 30px;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
 }
 
-.cards article:hover{
-    transform:translateY(-5px);
+.popup-overlay.active .popup-box {
+    transform: scale(1);
 }
 
-/* PRODUCTS */
-
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+.popup-box h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
 }
 
-.product{
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    text-align:center;
-    box-shadow:0 5px 12px rgba(0,0,0,.15);
+.popup-btn {
+    display: inline-block;
+    background-color: #E28F9D; /* Exciting warm rose button color */
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(226, 143, 157, 0.4);
 }
 
-.product img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.product h3{
-    color:#1565C0;
-    margin:15px;
-}
-
-.product p{
-    margin-bottom:20px;
-    color:#ff5722;
-    font-weight:bold;
-}
-
-/* TABLE */
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:white;
-}
-
-table th{
-    background:#1565C0;
-    color:white;
-    padding:15px;
-}
-
-table td{
-    padding:15px;
-    border:1px solid #ddd;
-    text-align:center;
-}
-
-table tr:nth-child(even){
-    background:#f7f7f7;
-}
-
-/* VIDEO */
-
-iframe{
-    width:100%;
-    max-width:900px;
-    height:500px;
-    display:block;
-    margin:auto;
-    border-radius:12px;
-}
-
-/* FORM */
-
-form{
-    background:white;
-    max-width:700px;
-    margin:auto;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 5px 12px rgba(0,0,0,.15);
-}
-
-label{
-    display:block;
-    margin-top:15px;
-}
-
-input{
-    width:100%;
-    padding:12px;
-    margin-top:8px;
-    margin-bottom:15px;
-}
-
-input[type=radio],
-input[type=checkbox]{
-    width:auto;
-}
-
-input[type=submit]{
-    background:#1565C0;
-    color:white;
-    border:none;
-    cursor:pointer;
-}
-
-input[type=submit]:hover{
-    background:#ff5722;
-}
-
-/* CONTACT */
-
-aside{
-    background:white;
-    margin:40px;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 5px 12px rgba(0,0,0,.15);
-}
-
-/* FOOTER */
-
-footer{
-    background:#1565C0;
-    color:white;
-    text-align:center;
-    padding:25px;
-    margin-top:40px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero-image{
-    height:300px;
-}
-
-.hero h2{
-    font-size:28px;
-}
-
-.hero-text{
-    width:90%;
-}
-
-iframe{
-    height:250px;
-}
-
-section{
-    padding:20px;
-}
-
-aside{
-    margin:20px;
-}
-
+.close-x {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #999;
 }
