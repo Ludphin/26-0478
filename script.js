@@ -1,38 +1,4 @@
-/*=========================================
- TURBO COMPANY - JAVASCRIPT
- Student: __________________
-=========================================*/
-
-// Popup Message
+// Welcome Pop-up
 window.onload = function () {
-    alert("🚗 Welcome to Turbo Company!\n\nYour trusted supplier of genuine Japanese spare parts.\n\nBrowse our products and register today!");
+    alert("🚗 Welcome to Turbo Company!\n\nWe specialize in genuine Japanese spare parts.\n\nEnjoy browsing our products!");
 };
-
-// Display current year in the footer
-const year = new Date().getFullYear();
-
-const footer = document.querySelector("footer p");
-
-if (footer) {
-    footer.innerHTML = "&copy; " + year + " Turbo Company. All Rights Reserved.";
-}
-
-// Display a message after form submission
-const form = document.querySelector("form");
-
-if (form) {
-
-    form.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-        alert("✅ Registration Successful!\n\nThank you for registering with Turbo Company.");
-
-        form.reset();
-
-    });
-
-}
-
-// Log a message in the browser console
-console.log("Turbo Company Website Loaded Successfully");

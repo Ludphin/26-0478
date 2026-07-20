@@ -249,4 +249,21 @@ header h1{
     font-size:30px;
 }
 
+/* Hero Image */
+
+.hero{
+    text-align:center;
+    background:white;
+    padding:30px;
+}
+
+.hero-image{
+    width:90%;
+    max-width:900px;
+    height:450px;
+    object-fit:cover;
+    border-radius:10px;
+    display:block;
+    margin:20px auto;
+}
 }
