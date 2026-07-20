@@ -1,197 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FreshBulk Wholesale Foods</title>
-<link rel="stylesheet" href="style.css">
+
+    <!-- Website Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Turbo Company | Japanese Spare Parts</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- External JavaScript -->
+    <script src="script.js" defer></script>
+
 </head>
+
 <body>
 
-<!-- Welcome Popup -->
-<div class="popup-overlay" id="welcomePopup">
-    <div class="popup-box">
-        <button class="popup-close" onclick="closePopup()">&times;</button>
-        <h3>Welcome to FreshBulk Wholesale Foods!</h3>
-        <p>Enjoy exclusive wholesale prices on fresh produce, meats, and pantry staples. Register below to get started.</p>
-        <button class="popup-ok-btn" onclick="closePopup()">OK</button>
-    </div>
-</div>
+    <!-- ================= HEADER ================= -->
 
-<header>
-    <h1>FreshBulk Wholesale Foods</h1>
-    <p>Your Trusted Wholesale Food Supplier</p>
-</header>
+    <header id="home">
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#register">Register</a>
-    <a href="#contact">Contact</a>
-</nav>
+        <h1>Turbo Company</h1>
 
-<section id="home">
-    <h2>Welcome to FreshBulk Wholesale Foods</h2>
-    <p>
-        FreshBulk Wholesale Foods supplies high-quality food products at affordable wholesale prices.
-        We serve restaurants, retailers, and families looking for fresh products in bulk quantities.
-    </p>
-</section>
+        <p>Your Trusted Supplier of Genuine Japanese Spare Parts</p>
 
-<section id="about">
-    <h2>About Us</h2>
-    <p>
-        Established in 2010, FreshBulk has grown into a trusted supplier serving hundreds of customers.
-        We partner with farmers and manufacturers to ensure quality products and competitive prices.
-    </p>
-</section>
+    </header>
 
-<section id="products">
-    <h2>FreshBulk Product Catalogue</h2>
+    <!-- ================= NAVIGATION ================= -->
 
-    <ul>
-        <li>Grains and Cereals</li>
-        <li>Fresh Fruits and Vegetables</li>
-        <li>Meat and Poultry</li>
-        <li>Dairy Products</li>
-        <li>Cooking Oils and Spices</li>
-        <li>Canned and Packaged Goods</li>
-    </ul>
+    <nav class="navbar">
 
-    <h2 style="text-align:center; background:#2e8b57; color:white; padding:10px;">
-        Wholesale Product Price List
-    </h2>
+        <a href="#home">Home</a>
 
-    <table>
-        <tr>
-            <th>Product</th>
-            <th>Category</th>
-            <th>Price</th>
-            <th>Availability</th>
-        </tr>
+        <a href="#about">About</a>
 
-        <tr>
-            <td>White Rice (25kg)</td>
-            <td>Grains</td>
-            <td>$18.99</td>
-            <td>In Stock</td>
-        </tr>
+        <a href="#products">Products</a>
 
-        <tr>
-            <td>Fresh Tomatoes</td>
-            <td>Vegetables</td>
-            <td>$12.50</td>
-            <td>In Stock</td>
-        </tr>
+        <a href="#prices">Prices</a>
 
-        <tr>
-            <td>Chicken Breast (10kg)</td>
-            <td>Meat & Poultry</td>
-            <td>$34.00</td>
-            <td>Available</td>
-        </tr>
+        <a href="#gallery">Gallery</a>
 
-        <tr>
-            <td>Sunflower Oil (5L)</td>
-            <td>Cooking Oils</td>
-            <td>$9.75</td>
-            <td>Available</td>
-        </tr>
+        <a href="#video">Video</a>
 
-        <tr>
-            <td>Canned Beans</td>
-            <td>Packaged Goods</td>
-            <td>$22.00</td>
-            <td>In Stock</td>
-        </tr>
-    </table>
-</section>
+        <a href="#register">Register</a>
 
-<section id="gallery">
-    <h2>Images and Videos Gallery</h2>
+        <a href="#contact">Contact</a>
 
-    <div class="media-grid">
+    </nav>
 
-        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600"
-        alt="Vegetables">
+    <!-- ================= MAIN CONTENT ================= -->
 
-        <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=600"
-        alt="Fruits">
+    <main>
 
-        <iframe
-        src="https://www.youtube.com/embed/5xGICztmBVk"
-        allowfullscreen>
-        </iframe>
+        <!-- HERO SECTION -->
 
-        <iframe
-        src="https://www.youtube.com/embed/m5M_XUgWu2I"
-        allowfullscreen>
-        </iframe>
+        <section class="hero">
 
-    </div>
-</section>
+            <h2>Drive With Confidence</h2>
 
-<!-- Registration Section -->
-<section id="register">
-    <h2 style="text-align:center;">Customer Registration</h2>
+            <p>
 
-    <form class="registration-form" id="registrationForm" onsubmit="return handleRegistration(event)">
+                Turbo Company supplies high-quality Japanese spare parts
+                for Toyota, Nissan, Subaru, Honda, Mazda and Mitsubishi vehicles.
 
-        <div class="form-group">
-            <label for="regName">Full Name</label>
-            <input type="text" id="regName" name="name" placeholder="Enter your full name" required>
-        </div>
+            </p>
 
-        <div class="form-group">
-            <label for="regEmail">Email Address</label>
-            <input type="email" id="regEmail" name="email" placeholder="Enter your email" required>
-        </div>
+        </section>
 
-        <div class="form-group">
-            <label for="regPhone">Phone Number</label>
-            <input type="tel" id="regPhone" name="phone" placeholder="Enter your phone number" required>
-        </div>
+        <!-- ABOUT -->
 
-        <div class="form-group">
-            <label>Gender</label>
-            <div class="gender-group">
-                <div class="gender-option">
-                    <input type="radio" id="genderMale" name="gender" value="Male" required>
-                    <label for="genderMale">Male</label>
-                </div>
-                <div class="gender-option">
-                    <input type="radio" id="genderFemale" name="gender" value="Female">
-                    <label for="genderFemale">Female</label>
-                </div>
-                <div class="gender-option">
-                    <input type="radio" id="genderOther" name="gender" value="Other">
-                    <label for="genderOther">Other</label>
-                </div>
-            </div>
-        </div>
+        <section id="about" class="content">
 
-        <button type="submit">Register</button>
+            <h2>About Us</h2>
 
-    </form>
-</section>
+            <p>
 
-<section id="contact">
-    <h2>Contact Us</h2>
+                Turbo Company is committed to providing reliable,
+                affordable and genuine Japanese vehicle spare parts.
+                Our mission is to deliver quality products and excellent
+                customer service throughout Kenya.
 
-    <div class="contact">
-        <p><strong>Email:</strong> info@freshbulkfoods.com</p>
-        <p><strong>Phone:</strong> +1 (800) 555-0192</p>
-        <p><strong>Address:</strong> 45 Warehouse District, Chicago, IL 60601</p>
-        <p><strong>Business Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM</p>
-    </div>
-</section>
+            </p>
 
-<footer>
-    <p>&copy; 2025 FreshBulk Wholesale Foods. All Rights Reserved.</p>
-</footer>
+        </section>
 
-<script src="script.js"></script>
+        <!-- PRODUCTS -->
+
+        <section id="products">
+
+            <h2>Featured Products</h2>
+
+            <article class="card">
+
+                <h3>Toyota Engine Parts</h3>
+
+                <p>Original engine components for Toyota vehicles.</p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Nissan Gearboxes</h3>
+
+                <p>Reliable manual and automatic gearboxes.</p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Subaru Turbo Kits</h3>
+
+                <p>High-performance turbochargers.</p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Mazda Brake Pads</h3>
+
+                <p>Durable braking systems for safer driving.</p>
+
+            </article>
+
+        </section>
+
+        <!-- TABLE -->
+
+        <section id="prices">
+
+            <h2>Price List</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Product</th>
+
+                    <th>Vehicle</th>
+
+                    <th>Price</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Turbocharger</td>
+
+                    <td>Subaru</td>
+
+                    <td>KSh 45,000</td>
+
+                    <td>Available</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Brake Pads</td>
+
+                    <td>Mazda</td>
+
+                    <td>KSh 6,000</td>
+
+                    <td>Available</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Gearbox</td>
+
+                    <td>Nissan</td>
+
+                    <td>KSh 70,000</td>
+
+                    <td>Limited</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Oil Filter</td>
+
+                    <td>Honda</td>
+
+                    <td>KSh 1,200</td>
+
+                    <td>In Stock</td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- GALLERY -->
+
+        <section id="gallery">
+
+            <h2>Gallery</h2>
+
+            <figure>
+
+                <img src="images/engine.jpg" alt="Toyota Engine" loading="lazy">
+
+                <figcaption>Toyota Engine</figcaption>
+
+            </figure>
+
+            <figure>
+
+                <img src="images/gearbox.jpg" alt="Gearbox" loading="lazy">
+
+                <figcaption>Nissan Gearbox</figcaption>
+
+            </figure>
+
+            <figure>
+
+                <img src="images/turbo.jpg" alt="Turbo" loading="lazy">
+
+                <figcaption>Subaru Turbo</figcaption>
+
+            </figure>
+
+            <figure>
+
+                <img src="images/brakes.jpg" alt="Brake Pads" loading="lazy">
+
+                <figcaption>Brake Pads</figcaption>
+
+            </figure>
+
+            <figure>
+
+                <img src="images/battery.jpg" alt="Battery" loading="lazy">
+
+                <figcaption>Car Battery</figcaption>
+
+            </figure>
+
+            <figure>
+
+                <img src="images/suspension.jpg" alt="Suspension" loading="lazy">
+
+                <figcaption>Suspension Kit</figcaption>
+
+            </figure>
+
+        </section>
+
+        <!-- YOUTUBE -->
+
+        <section id="video">
+
+            <h2>Watch Our Products</h2>
+
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/jNQXAC9IVRw"
+                title="YouTube Video"
+                allowfullscreen>
+            </iframe>
+
+        </section>
+
+        <!-- REGISTRATION -->
+
+        <section id="register">
+
+            <h2>Customer Registration</h2>
+
+            <form>
+
+                <label>First Name</label>
+                <input type="text" required>
+
+                <label>Second Name</label>
+                <input type="text" required>
+
+                <label>Email</label>
+                <input type="email" required>
+
+                <label>Phone</label>
+                <input type="tel" required>
+
+                <label>Date</label>
+                <input type="date">
+
+                <label>Search Vehicle Model</label>
+                <input type="search">
+
+                <label>Upload Vehicle Photo</label>
+                <input type="file">
+
+                <p>Vehicle Type</p>
+
+                <input type="radio" name="vehicle"> Sedan
+
+                <input type="radio" name="vehicle"> SUV
+
+                <input type="radio" name="vehicle"> Pickup
+
+                <br><br>
+
+                <input type="checkbox">
+
+                I agree to the terms and conditions.
+
+                <br><br>
+
+                <input type="submit" value="Register">
+
+            </form>
+
+        </section>
+
+        <!-- CONTACT -->
+
+        <aside id="contact">
+
+            <h2>Contact Us</h2>
+
+            <p><strong>Turbo Company</strong></p>
+
+            <p>Kiambu Road, Nairobi</p>
+
+            <p>Phone: +254 712 345678</p>
+
+            <p>Email: info@turbocompany.co.ke</p>
+
+            <p>Open: Monday - Saturday | 8:00 AM - 6:00 PM</p>
+
+        </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>&copy; 2026 Turbo Company. All Rights Reserved.</p>
+
+    </footer>
+
 </body>
+
 </html>

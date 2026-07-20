@@ -1,42 +1,38 @@
-// Show welcome popup when page loads
-window.addEventListener('DOMContentLoaded', function () {
-    var popup = document.getElementById('welcomePopup');
-    if (popup) {
-        popup.classList.add('active');
-    }
-});
+/*=========================================
+ TURBO COMPANY - JAVASCRIPT
+ Student: __________________
+=========================================*/
 
-function closePopup() {
-    var popup = document.getElementById('welcomePopup');
-    if (popup) {
-        popup.classList.remove('active');
-    }
+// Popup Message
+window.onload = function () {
+    alert("🚗 Welcome to Turbo Company!\n\nYour trusted supplier of genuine Japanese spare parts.\n\nBrowse our products and register today!");
+};
+
+// Display current year in the footer
+const year = new Date().getFullYear();
+
+const footer = document.querySelector("footer p");
+
+if (footer) {
+    footer.innerHTML = "&copy; " + year + " Turbo Company. All Rights Reserved.";
 }
 
-// Close popup when clicking outside the box
-window.addEventListener('click', function (event) {
-    var popup = document.getElementById('welcomePopup');
-    if (popup && event.target === popup) {
-        closePopup();
-    }
-});
+// Display a message after form submission
+const form = document.querySelector("form");
 
-// Handle registration form submission
-function handleRegistration(event) {
-    event.preventDefault();
+if (form) {
 
-    var name = document.getElementById('regName').value.trim();
-    var email = document.getElementById('regEmail').value.trim();
-    var phone = document.getElementById('regPhone').value.trim();
-    var genderInput = document.querySelector('input[name="gender"]:checked');
-    var gender = genderInput ? genderInput.value : '';
+    form.addEventListener("submit", function (event) {
 
-    if (!name || !email || !phone || !gender) {
-        alert('Please fill in all fields, including gender, before submitting.');
-        return false;
-    }
+        event.preventDefault();
 
-    alert('Thank you, ' + name + '! Your registration has been received.');
-    document.getElementById('registrationForm').reset();
-    return false;
+        alert("✅ Registration Successful!\n\nThank you for registering with Turbo Company.");
+
+        form.reset();
+
+    });
+
 }
+
+// Log a message in the browser console
+console.log("Turbo Company Website Loaded Successfully");
