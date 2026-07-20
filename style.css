@@ -1,269 +1,292 @@
-/* ===================================
-   TURBO COMPANY - EXTERNAL CSS
-   Student: ____________________
-   =================================== */
-
-/* General Styling */
+/* ===========================================
+   TURBO COMPANY - STYLE.CSS
+   Student HTML5 Assignment
+=========================================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f5f5;
+    background:#eef4ff;
     color:#333;
-    line-height:1.6;
 }
 
-/* Header */
+/* HEADER */
 
 header{
-    background:#002147;
+    background:linear-gradient(90deg,#1565C0,#42A5F5);
     color:white;
     text-align:center;
-    padding:40px;
+    padding:30px;
 }
 
 header h1{
-    font-size:40px;
+    font-size:42px;
 }
 
 header p{
     margin-top:10px;
+    font-size:18px;
 }
 
-/* Navigation */
+/* NAVIGATION */
 
-.navbar{
-    background:#111;
-    text-align:center;
+nav{
+    background:#ff5722;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
     padding:15px;
 }
 
-.navbar a{
+nav a{
     color:white;
     text-decoration:none;
-    margin:15px;
     font-weight:bold;
+    transition:.3s;
 }
 
-.navbar a:hover{
-    color:red;
+nav a:hover{
+    color:yellow;
 }
 
-/* Hero Section */
+/* HERO */
 
 .hero{
-    background:white;
+    position:relative;
     text-align:center;
-    padding:40px;
+}
+
+.hero-image{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+}
+
+.hero-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(0,0,0,.45);
+    color:white;
+    padding:30px;
+    border-radius:12px;
 }
 
 .hero h2{
-    color:#002147;
-    margin-bottom:15px;
+    font-size:40px;
 }
 
-/* Sections */
+.hero p{
+    margin:20px 0;
+    font-size:18px;
+}
+
+button{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1565C0;
+}
+
+/* SECTIONS */
 
 section{
-    padding:30px;
+    padding:50px;
 }
 
-.content{
+section h2{
+    text-align:center;
+    color:#1565C0;
+    margin-bottom:25px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.cards article{
     background:white;
-    margin:20px;
     padding:25px;
-    border-radius:10px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
 }
 
-/* Product Cards */
+.cards article:hover{
+    transform:translateY(-5px);
+}
 
-.card{
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.product{
     background:white;
-    margin:20px;
-    padding:20px;
-    border-left:6px solid red;
-    border-radius:8px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    border-radius:12px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
 }
 
-.card h3{
-    color:#002147;
-    margin-bottom:10px;
+.product img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
 }
 
-/* Table */
+.product h3{
+    color:#1565C0;
+    margin:15px;
+}
+
+.product p{
+    margin-bottom:20px;
+    color:#ff5722;
+    font-weight:bold;
+}
+
+/* TABLE */
 
 table{
     width:100%;
     border-collapse:collapse;
-    margin-top:20px;
     background:white;
 }
 
 table th{
-    background:#002147;
+    background:#1565C0;
     color:white;
     padding:15px;
 }
 
 table td{
-    border:1px solid #ddd;
     padding:15px;
+    border:1px solid #ddd;
     text-align:center;
 }
 
 table tr:nth-child(even){
-    background:#eeeeee;
+    background:#f7f7f7;
 }
 
-/* Gallery */
-
-#gallery{
-    text-align:center;
-}
-
-figure{
-    display:inline-block;
-    margin:15px;
-}
-
-figure img{
-    width:280px;
-    height:200px;
-    object-fit:cover;
-    border-radius:10px;
-    transition:0.3s;
-}
-
-figure img:hover{
-    transform:scale(1.05);
-}
-
-figcaption{
-    margin-top:8px;
-    font-weight:bold;
-}
-
-/* Video */
+/* VIDEO */
 
 iframe{
+    width:100%;
+    max-width:900px;
+    height:500px;
     display:block;
     margin:auto;
-    border:none;
-    max-width:100%;
+    border-radius:12px;
 }
 
-/* Form */
+/* FORM */
 
 form{
     background:white;
+    max-width:700px;
+    margin:auto;
     padding:30px;
-    border-radius:10px;
+    border-radius:12px;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
 }
 
-form label{
+label{
     display:block;
     margin-top:15px;
-    font-weight:bold;
 }
 
-form input{
+input{
     width:100%;
-    padding:10px;
-    margin-top:5px;
+    padding:12px;
+    margin-top:8px;
     margin-bottom:15px;
 }
 
-/* Radio Buttons */
-
-input[type="radio"]{
-    width:auto;
-    margin-right:5px;
-}
-
-/* Check Box */
-
-input[type="checkbox"]{
+input[type=radio],
+input[type=checkbox]{
     width:auto;
 }
 
-/* Submit Button */
-
-input[type="submit"]{
-    background:red;
+input[type=submit]{
+    background:#1565C0;
     color:white;
     border:none;
     cursor:pointer;
-    font-size:18px;
 }
 
-input[type="submit"]:hover{
-    background:#002147;
+input[type=submit]:hover{
+    background:#ff5722;
 }
 
-/* Contact */
+/* CONTACT */
 
 aside{
     background:white;
-    margin:20px;
-    padding:25px;
-    border-left:5px solid #002147;
-    border-radius:10px;
+    margin:40px;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
 }
 
-/* Footer */
+/* FOOTER */
 
 footer{
-    background:#111;
+    background:#1565C0;
     color:white;
     text-align:center;
-    padding:20px;
-    margin-top:30px;
+    padding:25px;
+    margin-top:40px;
 }
 
-/* Responsive Design */
+/* MOBILE */
 
 @media(max-width:768px){
 
-.navbar a{
-    display:block;
-    margin:10px;
+.hero-image{
+    height:300px;
 }
 
-figure img{
-    width:95%;
-    height:auto;
+.hero h2{
+    font-size:28px;
+}
+
+.hero-text{
+    width:90%;
 }
 
 iframe{
-    width:100%;
     height:250px;
 }
 
-header h1{
-    font-size:30px;
+section{
+    padding:20px;
 }
 
-/* Hero Image */
-
-.hero{
-    text-align:center;
-    background:white;
-    padding:30px;
+aside{
+    margin:20px;
 }
 
-.hero-image{
-    width:90%;
-    max-width:900px;
-    height:450px;
-    object-fit:cover;
-    border-radius:10px;
-    display:block;
-    margin:20px auto;
-}
 }
