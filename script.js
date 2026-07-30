@@ -1,5 +1,11 @@
 // Automatically show the premium pop-up modal when the website loads
 window.addEventListener('DOMContentLoaded', () => {
+    // Skip the popup when PHP redirected us back to a form, so it doesn't
+    // cover the success/error banner the visitor came back to read.
+    if (window.location.hash === '#register' || window.location.hash === '#contact') {
+        return;
+    }
+
     const popup = document.getElementById('premiumPopup');
     if (popup) {
         popup.classList.add('active');

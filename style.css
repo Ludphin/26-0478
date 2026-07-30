@@ -85,6 +85,43 @@ h2, h3 {
     border: 1px solid rgba(226, 143, 157, 0.2);
 }
 
+/* Card rows (Why Choose Us, Videos) */
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.features-container > .feature-card {
+    flex: 1 1 260px;
+    text-align: center;
+}
+
+/* Form feedback banners set by the PHP handlers */
+.flash {
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.flash-success {
+    background: #E7F6EC;
+    color: #1E6B3A;
+    border: 1px solid #A8DCBB;
+}
+
+.flash-error {
+    background: #FDECEF;
+    color: #8C1D33;
+    border: 1px solid #F0B6C1;
+}
+
 /* Image Configurations */
 .image-grid {
     display: grid;
