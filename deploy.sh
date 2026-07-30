@@ -18,9 +18,18 @@ set -euo pipefail
 
 # ftpupload.net, not the web server's IP - 185.27.134.128 has no FTP on port 21.
 HOST="${FTP_HOST:-ftpupload.net}"
-USER="${FTP_USER:-if0_42296674}"
 REMOTE_DIR="${FTP_REMOTE_DIR:-htdocs}"
 PASS_FILE="$HOME/.turbo-ftp-pass"
+
+# Deliberately no default account. This machine has more than one InfinityFree
+# site, and a wrong default would upload Turbo Company over a different
+# project's htdocs.
+if [ -z "${FTP_USER:-}" ]; then
+    echo "Set FTP_USER to this site's InfinityFree account, e.g." >&2
+    echo "  FTP_USER=if0_00000000 ./deploy.sh" >&2
+    exit 2
+fi
+USER="$FTP_USER"
 
 if [ -n "${FTP_PASS:-}" ]; then
     PASS="$FTP_PASS"
@@ -35,6 +44,36 @@ cd "$(dirname "$0")"
 
 echo "Uploading to ftp://$HOST/$REMOTE_DIR as $USER"
 echo
+
+# Refuse to upload into someone else's site. Anything already in htdocs that
+# isn't ours or one of InfinityFree's own placeholder files means this is the
+# wrong account, and uploading would overwrite same-named files (admin/,
+# script.js and index.php collide with most PHP projects).
+if [ "${FORCE:-0}" != "1" ]; then
+    ours=" .htaccess admin contact.php images includes index.php register.php script.js style.css "
+    theirs=" . .. .override index2.html "
+    strangers=""
+
+    while IFS= read -r entry; do
+        name="${entry##*/}"
+        [ -z "$name" ] && continue
+        # InfinityFree drops instructional files in an empty htdocs; ignore them.
+        case "$name" in
+            *"files for your website"*|*"DO NOT UPLOAD"*) continue ;;
+        esac
+        case "$ours$theirs" in
+            *" $name "*) ;;
+            *) strangers="$strangers  $name"$'\n' ;;
+        esac
+    done < <(curl -sS --connect-timeout 20 -u "$USER:$PASS" --list-only "ftp://$HOST/$REMOTE_DIR/" || true)
+
+    if [ -n "$strangers" ]; then
+        echo "Refusing to upload: $REMOTE_DIR already contains another project." >&2
+        echo "$strangers" >&2
+        echo "Check FTP_USER is the right account. Re-run with FORCE=1 to upload anyway." >&2
+        exit 3
+    fi
+fi
 
 uploaded=0
 failed=0
