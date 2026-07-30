@@ -1,8 +1,8 @@
 -- Turbo Company - starting data (the content the static site used to hard-code)
--- Run after schema.sql:
---   mysql -h 127.0.0.1 -P 3307 -u root --protocol=TCP < sql/seed.sql
-
-USE turbo_company;
+--
+-- Run after schema.sql, against the same database:
+--   mysql -h 127.0.0.1 -P 3307 -u root --protocol=TCP turbo_company < sql/seed.sql
+-- Hosted: phpMyAdmin -> pick the database -> Import -> choose this file
 
 -- ---------------------------------------------------------------
 -- Categories

@@ -1,19 +1,13 @@
 <?php
-// Database connection. Edit these to match your server.
+// Database connection. Credentials live in config.php.
 
-$host   = "127.0.0.1";
-// 3307, not 3306: the MariaDB instance on this machine listens on 3307.
-// Under a stock XAMPP install this is usually 3306.
-$port   = "3307";
-$dbname = "turbo_company";
-$user   = "root";
-$pass   = "";
+require_once __DIR__ . "/config.php";
 
 try {
     $pdo = new PDO(
-        "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4",
-        $user,
-        $pass,
+        "mysql:host=" . DB_HOST . ";port=" . DB_PORT . ";dbname=" . DB_NAME . ";charset=utf8mb4",
+        DB_USER,
+        DB_PASS,
         [
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -22,5 +16,18 @@ try {
         ]
     );
 } catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+    // Never print the driver message on a live site - it names the host, the
+    // database and the user. Log it instead and show something harmless.
+    error_log("DB connection failed: " . $e->getMessage());
+
+    $isLocal = in_array(
+        $_SERVER["SERVER_NAME"] ?? "localhost",
+        ["localhost", "127.0.0.1", "::1"],
+        true
+    );
+
+    http_response_code(503);
+    die($isLocal
+        ? "Database connection failed: " . $e->getMessage()
+        : "The site is temporarily unavailable. Please try again shortly.");
 }

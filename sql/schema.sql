@@ -1,11 +1,12 @@
 -- Turbo Company - database schema
--- Run with:  mysql -h 127.0.0.1 -P 3307 -u root --protocol=TCP < sql/schema.sql
-
-CREATE DATABASE IF NOT EXISTS turbo_company
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_unicode_ci;
-
-USE turbo_company;
+--
+-- Deliberately has no CREATE DATABASE / USE line, so it imports into whatever
+-- database is already selected. Shared hosts such as InfinityFree name the
+-- database for you (if0_00000000_turbo) and don't grant CREATE DATABASE.
+--
+-- Locally:  mysql -h 127.0.0.1 -P 3307 -u root --protocol=TCP turbo_company < sql/schema.sql
+--           (run sql/create_database.sql first if the database doesn't exist)
+-- Hosted:   phpMyAdmin -> pick the database -> Import -> choose this file
 
 -- Dropped child-first so the script can be re-run from scratch.
 DROP TABLE IF EXISTS contact_messages;

@@ -1,0 +1,20 @@
+# Serve index.php rather than listing the folder.
+DirectoryIndex index.php index.html
+
+# No directory listings anywhere on the site.
+Options -Indexes
+
+# Belt and braces: .sql dumps must never be downloadable. seed.sql contains
+# the admin account's password hash.
+<FilesMatch "\.(sql|md|log)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Friendly error pages would go here once written, e.g.
+# ErrorDocument 404 /404.php

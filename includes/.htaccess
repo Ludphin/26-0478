@@ -1,0 +1,9 @@
+# Included by other scripts, never requested directly. Blocking this folder
+# means a server that stops parsing PHP can't hand out config.php as plain text.
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>
