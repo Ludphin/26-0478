@@ -50,7 +50,7 @@ echo
 # wrong account, and uploading would overwrite same-named files (admin/,
 # script.js and index.php collide with most PHP projects).
 if [ "${FORCE:-0}" != "1" ]; then
-    ours=" .htaccess admin contact.php images includes index.php register.php script.js style.css "
+    ours=" .htaccess admin contact.php images includes index.php install.php register.php script.js sql style.css "
     theirs=" . .. .override index2.html "
     strangers=""
 
@@ -97,6 +97,7 @@ done < <(
         -not -path './sql/*' \
         -not -name 'README.md' \
         -not -name 'deploy.sh' \
+        -not -name 'install.php' \
         -not -name '.DS_Store' \
         -print0
 )
