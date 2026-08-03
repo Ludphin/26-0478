@@ -21,7 +21,10 @@ const INSTALL_TOKEN = "REPLACE_BEFORE_UPLOAD";
 
 header("Content-Type: text/plain; charset=utf-8");
 
-if (INSTALL_TOKEN === "REPLACE_BEFORE_UPLOAD") {
+// Checked by length, not by comparing against the placeholder text: a careless
+// search-and-replace would rewrite both copies of that string and defeat the
+// check. A real token is 32 hex characters.
+if (strlen(INSTALL_TOKEN) < 32) {
     http_response_code(500);
     exit("This installer still has its placeholder token. Set INSTALL_TOKEN first.\n");
 }
