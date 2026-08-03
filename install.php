@@ -11,11 +11,20 @@
 // It refuses to run if the tables already hold data, so a stray click can't
 // wipe a live site; ?force=1 overrides that when you really do mean to reset.
 
-// Anyone who can guess this can wipe the database, hence a random token rather
-// than a password anyone might reuse.
-const INSTALL_TOKEN = "3419293c905508ea72c3a7da6924bb7d";
+// Deliberately not a working value. This file lives in a public repository, so
+// a real token committed here would be a published key to wiping the database.
+// Generate one and substitute it in the copy you upload, never in the repo:
+//
+//   php -r 'echo bin2hex(random_bytes(16)), "\n";'
+//
+const INSTALL_TOKEN = "REPLACE_BEFORE_UPLOAD";
 
 header("Content-Type: text/plain; charset=utf-8");
+
+if (INSTALL_TOKEN === "REPLACE_BEFORE_UPLOAD") {
+    http_response_code(500);
+    exit("This installer still has its placeholder token. Set INSTALL_TOKEN first.\n");
+}
 
 if (!hash_equals(INSTALL_TOKEN, $_GET["token"] ?? "")) {
     http_response_code(404);
